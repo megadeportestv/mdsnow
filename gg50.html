@@ -42,5 +42,11 @@ var playerInstance = jwplayer("player");
         cast: {},
         sharing: {}
     });
+  if (getLang == "") {
+			lang = 1;
+		}
+		jwplayer().on('play', function(e) {
+		  jwplayer().setCurrentAudioTrack(lang);
+		});
 </script>
 </html>
